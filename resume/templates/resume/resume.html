@@ -1,0 +1,40 @@
+{% extends 'resume/wrapper.html' %}
+
+{% block title %}
+    Resume
+{% endblock %}
+
+{% block content %}
+    <div>
+        <div>
+            <h1>Experience</h1>
+            <div>
+                {% for job in experience %}
+                    <p>
+                        {{ job }}
+                    </p>
+                {% endfor %}
+            </div>
+        </div>
+        <div>
+            <h1>Education</h1>
+            <div>
+                {% for degree in education %}
+                    <p>
+                        {{ degree }}
+                    </p>
+                {% endfor %}
+            </div>
+        </div>
+        <div>
+            <h1>Licenses & Certifications</h1>
+            <div>
+                {% for cert in certs %}
+                    <p>
+                        {{ cert }}
+                    </p>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock %}
